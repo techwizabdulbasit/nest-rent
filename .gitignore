@@ -2,8 +2,13 @@
 /dist
 /node_modules
 .env
-/uploads
-/invalid-csv-data
+/uploads/*
+/invalid-csv-data/*
+techwiz
+techwiz.pub
+/dist
+
+
 # Logs
 logs
 *.log

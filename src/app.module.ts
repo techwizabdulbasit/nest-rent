@@ -16,9 +16,11 @@ import { MulterModule } from '@nestjs/platform-express';
 import * as dotenv from 'dotenv'
 dotenv.config()
 
+const DB_String_Cloud="mongodb+srv://wizardtechab:abdul@cluster0.egx68uh.mongodb.net/rentzo?retryWrites=true&w=majority";
+const DB_String_Local="mongodb://localhost/rentzo";
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/rentzo'), AuthModule, JwtModule, UsersManagementModule, PropertiesManagementModule, ImportDataModule, MulterModule],
+  imports: [MongooseModule.forRoot(DB_String_Cloud), AuthModule, JwtModule, UsersManagementModule, PropertiesManagementModule, ImportDataModule, MulterModule],
   controllers: [AppController],
   providers: [AppService],
 })
